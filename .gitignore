@@ -30,8 +30,6 @@ ENV/
 *.swp
 *.swo
 
-
-
 # Logs
 *.log
 
@@ -45,4 +43,6 @@ htmlcov/
 
 # Alembic
 alembic/versions/*
-!alembic/versions/.gitkeep 
+!alembic/versions/.gitkeep
+
+.env 
