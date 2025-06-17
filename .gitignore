@@ -41,8 +41,4 @@ ENV/
 .coverage
 htmlcov/
 
-# Alembic
-alembic/versions/*
-!alembic/versions/.gitkeep
-
 .env 
