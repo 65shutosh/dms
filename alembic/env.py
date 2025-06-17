@@ -1,6 +1,9 @@
 import os
-from dotenv import load_dotenv
-load_dotenv(os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env'))
+
+# Only load .env file if not in production
+if os.environ.get("ENV", "development") != "production":
+    from dotenv import load_dotenv
+    load_dotenv(os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env'))
 
 from logging.config import fileConfig
 from sqlalchemy import engine_from_config
