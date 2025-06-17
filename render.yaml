@@ -2,7 +2,7 @@ services:
   - type: web
     name: dms-backend
     env: python
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install -e . && pip install -r requirements.txt
     startCommand: alembic upgrade head && uvicorn app.main:app --host=0.0.0.0 --port=$PORT
     envVars:
       - key: ENV
